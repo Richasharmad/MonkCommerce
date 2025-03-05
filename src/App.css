@@ -1,0 +1,178 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: whitesmoke;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.select-product {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  width: 400px;
+  outline: none;
+  font-size: 14px;
+  margin-left: 0px;
+  background-color: white;
+  color: grey;
+  text-align: left;
+  border-radius: 3px;
+  height: 40px;
+}
+
+.product {
+  color: black;
+  font-size: 14px;
+  margin-left: 55px;
+  text-align: left;
+  margin-bottom: -18px;
+}
+
+.parent-product {
+  display: flex;
+  gap: 20px;
+  width: 500px
+}
+
+.add-discount {
+  background-color: green;
+  color: white;
+  border: none;
+  width: 160px;
+  border-radius: 3px;
+  height: 45px;
+}
+
+.add-product {
+  width: 196px;
+  margin-left: 550px;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 20px;
+  color: green;
+  border-color: green;
+  border-radius: 3px;
+}
+
+.discount {
+  color: black;
+  font-size: 14px;
+  margin-left: 505px;
+  margin-bottom: 10px;
+}
+
+.add-products {
+  color: black;
+  text-align: left;
+  font-size: 14px
+}
+
+.custom-divider {
+  border-bottom: 1px solid #e0e0e0;
+  margin: 8px 0;
+}
+
+.choose-product {
+  width: 60px;
+  margin-left: 180px;
+  font-size: 14px;
+  color: white;
+  border-color: green;
+  border-radius: 3px;
+  height: 35px;
+  background-color: green;
+}
+
+.choose-cancel {
+  border-color: green;
+  color: green;
+  border: none;
+  width: 100px;
+  border-radius: 3px;
+  height: 35px;
+}
+
+.img-body {
+  display: flex;
+  align-items: center;
+}
+
+.img-body2 {
+  padding: 10px 10px 10px 10px;
+}
+
+.product-variants {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  background-color: white;
+}
+
+.variants-body {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.variant-title {
+  margin-right: 400px;
+}
+
+.modal {
+  border-radius: 40%;
+}
+
+.show-varaints {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  width: 315px;
+  outline: none;
+  font-size: 14px;
+  margin-left: 0px;
+  background-color: white;
+  color: grey;
+  text-align: left;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.show-variant-link {
+  font-size: 14px;
+  margin-left: 450px;
+  display: inline-flex;
+  align-items: center;
+}
