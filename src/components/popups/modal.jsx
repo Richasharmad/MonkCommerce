@@ -10,7 +10,6 @@ import Typography from '@mui/material/Typography';
 import '../../../src/App.css';
 import Checkbox from '@mui/material/Checkbox';
 import { TextField } from "@mui/material";
-import SearchIcon from '@mui/icons-material/Search';
 
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -36,7 +35,6 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 const SelectProductModal = ({ products, onOpen, onClose, onSelect }) => {
     const [checked, setChecked] = useState(false);
     const [checkedItems, setCheckedItems] = useState(false);
-    const [selected, setSelected] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
 
     const filteredProducts = products.filter(product =>
@@ -54,12 +52,6 @@ const SelectProductModal = ({ products, onOpen, onClose, onSelect }) => {
             newCheckedItems[variant.id] = productChecked;
         });
         setCheckedItems(newCheckedItems);
-
-        if (productChecked) {
-            setSelected(product);
-        } else {
-            setSelected(null);
-        }
     }
 
     const handleItemChange = (variant) => {
@@ -141,7 +133,7 @@ const SelectProductModal = ({ products, onOpen, onClose, onSelect }) => {
                                             onChange={() => handleProductChange(product)}
                                             inputProps={{ 'aria-label': 'controlled' }}
                                         />
-                                        <img className="img-body2" src={product.image.src} width="50" height="50" />{product.title}
+                                        <img alt="" className="img-body2" src={product.image.src} width="50" height="50" />{product.title}
                                     </Typography>
                                 </div>
                                 <div className="product-variants">

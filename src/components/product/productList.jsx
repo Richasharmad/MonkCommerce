@@ -18,7 +18,7 @@ const ProductList = () => {
 
     useEffect(() => {
         addNewSelection();
-    }, []);
+    }, [addNewSelection]);
 
     const fetchProducts = (index) => {
         fetch(`https://stageapi.monkcommerce.app/task/products/search?search=Hat`, {
@@ -74,15 +74,6 @@ const ProductList = () => {
         }
         setSelectedProducts(updatedProducts);
     };
-
-    const columns = [
-        {
-            field: 'variantTitle',
-            headerName: 'Variant Title',
-            flex: 1,
-            sortable: false,
-        }
-    ];
 
 
     const moveProduct = (dragIndex, hoverIndex) => {
