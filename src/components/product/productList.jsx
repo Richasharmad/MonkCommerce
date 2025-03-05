@@ -16,6 +16,10 @@ const ProductList = () => {
     const [showVarints, setShowVariants] = useState(false)
     const [currentIndex, setCurrentIndex] = useState(null);
 
+    const addNewSelection = useCallback(() => {
+        setSelectedProducts(selectedProducts => [...selectedProducts, null]);
+    }, []);
+    
     useEffect(() => {
         addNewSelection();
     }, [addNewSelection]);
@@ -55,10 +59,6 @@ const ProductList = () => {
         setSelectedProducts(updatedProducts);
     };
 
-    const addNewSelection = useCallback(() => {
-        setSelectedProducts(selectedProducts => [...selectedProducts, null]);
-    }, []);
-    
 
     const handleShowHideVariants = (index) => {
         setShowVariants(prevShowVariants => ({
