@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import '../../../src/App.css'
 import SelectProductModal from '../popups/modal';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -55,9 +55,10 @@ const ProductList = () => {
         setSelectedProducts(updatedProducts);
     };
 
-    const addNewSelection = () => {
-        setSelectedProducts([...selectedProducts, null]);
-    };
+    const addNewSelection = useCallback(() => {
+        setSelectedProducts(selectedProducts => [...selectedProducts, null]);
+    }, []);
+    
 
     const handleShowHideVariants = (index) => {
         setShowVariants(prevShowVariants => ({
